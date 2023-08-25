@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, executor, types
 from voice_converter import VoiceConverter
 
 TELEBOT_TOKEN = '6375255466:AAH6xHuo8QoiDJttiVpPasNcxKMax1mgOis'
-TELEBOT_REPO = 'https://github.com/imasloff'
+TELEBOT_REPO = 'https://github.com/imasloff/yandex_test_bot'
 
 bot = Bot(TELEBOT_TOKEN)
 dp = Dispatcher(bot)
