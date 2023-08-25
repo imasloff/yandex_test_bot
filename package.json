@@ -2,7 +2,7 @@
   "name": "yatestbot",
   "version": "1.0.0",
   "description": "Здесь хранится выполненное тестовое задания для Яндекс.Практикум - телеграм бот.",
-  "main": "index.js",
+  "main": "main.py",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
