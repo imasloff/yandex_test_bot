@@ -7,8 +7,9 @@ class VoiceConverter:
 
     def __init__(self, filename: str, lang: str = 'ru-RU') -> None:
         self.lang = lang
-        subprocess.run(['ffmpeg', '-v', 'quiet', '-i', filename,
-                       filename.replace('.ogg', '.wav')],  shell=True)
+        cmd = ' '.join(['ffmpeg', '-v', 'quiet', '-i', filename,
+                       filename.replace(".ogg", ".wav")])
+        subprocess.call(cmd, cwd=os.getcwd(), shell=True)
         self.wav_file = filename.replace('.ogg', '.wav')
 
     def audio2text(self) -> str:
