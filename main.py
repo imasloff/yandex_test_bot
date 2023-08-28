@@ -58,8 +58,8 @@ async def get_voice_command(message: types.Message):
         with open(filename, 'wb') as new_file:
             new_file.write(downloaded_file.read())
         converter = VoiceConverter(filename)
-        command_text = converter.audio2text().lower()
         os.remove(filename)
+        command_text = converter.audio2text().lower()
         del converter
     except Exception as e:
         await message.answer('Не получилось расшифровать голосовое :(')
