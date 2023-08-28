@@ -16,7 +16,6 @@ class VoiceConverter:
         recognizer = sr.Recognizer()
 
         with sr.AudioFile(self.wav_file) as source:
-            recognizer.adjust_for_ambient_noise(source)
             audio = recognizer.record(source)
         return recognizer.recognize_google(audio, language=self.lang)
 
