@@ -62,7 +62,7 @@ async def get_voice_command(message: types.Message):
         os.remove(filename)
         del converter
     except Exception as e:
-        message.answer('Не получилось расшифровать голосовое :(')
+        await message.answer('Не получилось расшифровать голосовое :(')
         name = message.chat.full_name if message.chat.full_name else 'No_name'
         logger.exception(
             f"Chat {name} (ID: {message.chat.id}) Exception while recognizing speech: {e}")
